@@ -338,7 +338,7 @@ def player_turn(attacker, defender, char_attacker, char_defender, curr_action_va
         send_message("1000",[attacker,defender], f"{attacker_name} has used Heavy Attack on {defender_name}. Dealing {dmg} dmg. {defender_name} now has {char_defender.curr_hp} left.")
 
     def move_heal():
-        heal = char_attacker.max_hp*(0.2)
+        heal = char_attacker.user_hp*(0.2)
         char_attacker.curr_hp += heal
         char_attacker.next_turn -= (char_attacker.next_turn- curr_action_val) * 0.2 
         send_message("1000",[attacker,defender], f"{attacker_name} has used Heal. Healing {heal} dmg. {attacker_name} now has {char_attacker.curr_hp} left.")
